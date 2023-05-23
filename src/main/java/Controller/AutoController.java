@@ -23,4 +23,10 @@ public class AutoController {
     public List<Auto> crearAuto(){
         return autoService.generarXauto();
     }
+
+    @GetMapping("/filtroPrecio")
+    public List<Auto> crearFiltroPrecio(){
+        List<Auto> auto1 = autoService.generarXauto();
+        return autoService.filtroPrecio(auto1);
+    }
 }

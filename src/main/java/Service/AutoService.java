@@ -24,7 +24,9 @@ public class AutoService {
         scanner.nextLine();
 
         if(cantidad > 0){
-            return generarXauto();
+            List<Auto> auto1 = crearAuto(cantidad);
+            filtroPrecio(auto1);
+            return auto1;
         }else{
             System.out.println("la cantidad ingresada no es valida");
             return new ArrayList<>();
@@ -61,6 +63,29 @@ public class AutoService {
 
         }
 
+        return auto1;
+    }
+
+    public List<Auto> filtroPrecio (List<Auto> auto1){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Seleccione una opcion");
+        System.out.println("1. Menor o igual");
+        System.out.println("2. Mayor o igual");
+        System.out.println("Opcion: ");
+        int op = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.println("Valor referencial");
+        double precioReferencial = scanner.nextDouble();
+        scanner.nextLine();
+
+        if (op ==1){
+            auto1.removeIf(auto -> auto.getPrecioAuto() < precioReferencial);
+        }else if(op ==2){
+            auto1.removeIf(auto -> auto.getPrecioAuto() < precioReferencial);
+        }else{
+            System.out.println("Valor no valida");
+        }
         return auto1;
     }
 }
