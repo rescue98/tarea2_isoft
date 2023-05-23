@@ -1,4 +1,4 @@
-package Model;
+package com.example.Tarea2_Isoft.Model;
 
 public class Auto {
 
@@ -34,7 +34,7 @@ public class Auto {
         this.marcaAuto = marcaAuto;
     }
 
-    public int getAnioAuto(int i) {
+    public int getAnioAuto() {
         return anioAuto;
     }
 
