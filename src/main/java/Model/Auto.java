@@ -34,7 +34,7 @@ public class Auto {
         this.marcaAuto = marcaAuto;
     }
 
-    public int getAnioAuto() {
+    public int getAnioAuto(int i) {
         return anioAuto;
     }
 

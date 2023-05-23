@@ -19,8 +19,8 @@ public class AutoController {
         this.autoService = autoService;
     }
 
-    @GetMapping("/auto/{autos}")
-    public List<Auto> crearAuto(@PathVariable int autos){
-        return autoService.crearAuto(autos);
+    @GetMapping("/crearAuto")
+    public List<Auto> crearAuto(){
+        return autoService.generarXauto();
     }
 }
